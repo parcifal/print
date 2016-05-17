@@ -1,0 +1,19 @@
+<!--
+   - Definition of the configuration file for the PRINTER by PARCIFAL.
+   - 
+   - @author    Michaël van de Weerd
+   - @since     11.05.2016
+   -->
+<!ELEMENT printer (console?, log*) >
+
+<!ELEMENT console EMPTY >
+<!ATTLIST console debug (true|false) "false"
+                  print-log (true|false) "false" >
+
+<!ELEMENT log EMPTY >
+<!ATTLIST log tag CDATA #IMPLIED
+              location CDATA #REQUIRED
+              class-name CDATA ".*"
+              method-name CDATA ".*"
+              file-name CDATA ".*"
+              line-number CDATA ".*" >
