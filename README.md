@@ -4,7 +4,7 @@ The JAVA PRINT API provides easy access to the console and log files, enabling d
 
 ## Configuring PRINT
 
-The PRINT API can be configured using a file with the path "cfg/print.xml" in the root of your JAVA project. For an example configuration file, check out [/parcifal/print/example/print.xml](https://github.com/parcifal/print/blob/master/example/print.xml). See the following DTD notation (or [/print/src/eu.parcifal.print.dtd](https://github.com/parcifal/print/blob/master/eu.parcifal.print.dtd)) for the definition of print.xml.
+The PRINT API can be configured using a file with the path "cfg/print.xml" in the root of your JAVA project. For an example configuration file, check out [/parcifal/print/example/print.xml](https://raw.githubusercontent.com/parcifal/print/master/example/print.xml). See the following DTD notation (or [/print/src/eu.parcifal.print.dtd](https://raw.githubusercontent.com/parcifal/print/master/src/eu.parcifal.print.dtd)) for the definition of print.xml.
 
     <!--
        - The print.xml file contains a PRINTER root element that has zero or
@@ -60,7 +60,7 @@ An effort has been made to reduce the steps needed for using PRINT in JAVA code 
 
 The CONSOLE class, requiring the import of `eu.parcifal.print.Console`, contains several static method meant for different situations. The output of these method will always contain a header consisting of the TAG, defined by the method used, the date-time at which the method was called and the location at which the method was called, followed by all lines of the actual message provided to the method. The NOTE, WARNING and DEBUG methods all have a second variant, providing the possibility to add one or more arguments used for formatting the actual message. The formatting syntax is identical to that of the `java.lang.String#format(String, Object...)` method. Check out https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html for more information on formatting strings.
 
-The following example code demonstrates some uses of the methods in both the CONSOLE class and the LOG class, followed by the resulting output. Assume that all method calls are made at exactly 12 'o clock on the first of January in the year 2000 and the JAVA application is configured using the example configuration file at [/print/example/print.xml](https://github.com/parcifal/print/blob/master/example/print.xml).
+The following example code demonstrates some uses of the methods in both the CONSOLE class and the LOG class, followed by the resulting output. Assume that all method calls are made at exactly 12 'o clock on the first of January in the year 2000 and the JAVA application is configured using the example configuration file at [/print/example/print.xml](https://raw.githubusercontent.com/parcifal/print/master/example/print.xml).
 
     package eu.parcifal.print.demo;
     
