@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!--
+   - This file provides is an example configuration file for the PRINT Java API 
+   - by PARCIFAL and can be considered as the default configuration.
+   - 
+   - This configuration enables DEBUG output to the console and results in a 
+   - single log file that collects all messages written to the LOG. Each 
+   - session has its own log file with a name referencing the time at which it 
+   - was created in the following format:
+   - 
+   -    filename:   "./log/" Y "." m "." d "-" H "." M "." S ".csv"
+   -    
+   -    Y:  current year formatted as four digits
+   -    m:  current month formatted as two digits
+   -    d:  current day of the month formatted as two digits
+   -    H:  current hour of the day for the 24-hours clock, formatted as two
+   -        digits
+   -    M:  current minute within the hour formatted as two digits
+   -    S:  current second within the minute formatted as two digits
+   - 
+   - The location attribute of the LOG element is formatted using the 
+   - java.lang.String#format(String, Object...) method, having a LocalDateTime 
+   - object containing the current date-time as the first argument. Check out 
+   - https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html for 
+   - more information about the formatting syntax.
+   - 
+   - @author    Michaël van de Weerd
+   - @version   17.05.2016
+   - @since     17.05.2016
+   -->
+<!DOCTYPE print SYSTEM "eu.parcifal.print.dtd" >
+<printer xmlns="https://print.parcifal.eu/2016">
+    <console debug="true" />
+    <log location="./log/%1$tY.%1$tm.%1$td-%1$tH.%1$tM.%1$tS.csv" />
+</printer>
