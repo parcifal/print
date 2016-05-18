@@ -3,3 +3,6 @@
 /log/
 /test/
 /example/
+.classpath
+.gitignore
+.project
